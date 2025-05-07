@@ -1,0 +1,79 @@
+/* Skill card container */
+.skillCard {
+  padding: 20px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Subtle gradient background */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 12px; /* Softer rounded corners */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Premium shadow */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Skill list container (Grid layout) */
+.skillList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+  justify-items: center; /* Center items horizontally */
+  align-items: start; /* Align items to the top */
+}
+
+/* Individual skill item */
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content in each grid item */
+  gap: 12px; /* Increased spacing for better readability */
+  width: 50%;
+}
+
+/* Skill header with only logo */
+.skillHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the logo */
+}
+
+.skillLogo {
+  width: 50px; /* Slightly larger logo for a premium look */
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth scaling and shadow effect */
+}
+
+.skillLogo:hover {
+  transform: scale(1.3); /* Slightly enlarge the logo on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Progress bar container */
+.progressBar {
+  width: 100%; /* Make the progress bar span the full width of the grid item */
+  height: 12px; /* Slightly taller progress bar for a premium feel */
+  background: linear-gradient(90deg, #e0e0e0, #f0f0f0); /* Subtle gradient background */
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 10px; /* Add spacing between the logo and progress bar */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.progressBar:hover {
+  background: linear-gradient(90deg, #d0d0d0, #e8e8e8); /* Change gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge the progress bar on hover */
+}
+
+/* Progress bar fill */
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784); /* Gradient for progress bar */
+  transition: width 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.progressBar:hover .progress {
+  background: linear-gradient(90deg, #66bb6a, #a5d6a7); /* Lighter gradient on hover */
+}
