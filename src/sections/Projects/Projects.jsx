@@ -1,5 +1,6 @@
 import styles from './ProjectsStyles.module.css';
 import ProjectCard from '../../common/ProjectCard';
+import pj from '../../assets/Untitled.svg'
 
 function Projects() {
   return (
@@ -7,7 +8,7 @@ function Projects() {
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <ProjectCard
-          src="https://36montane.vercel.app/assets/Untitled-CLk3oPHE.svg"
+          src={pj}
           link="https://36montane.vercel.app/"
           h3="36 Montane"
           p="Built a full-stack trip booking web app
