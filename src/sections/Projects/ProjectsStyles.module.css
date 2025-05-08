@@ -37,3 +37,10 @@
     padding: 0 30px;
   }
 }
+
+.responsiveImage {
+  max-width: 50%; /* Ensures the image doesn't exceed the container width */
+  height: auto;    /* Maintains the aspect ratio */
+  display: block;  /* Removes inline spacing */
+  margin: 0 auto;  /* Centers the image if needed */
+}
