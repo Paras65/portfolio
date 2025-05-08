@@ -107,6 +107,11 @@
     text-align: center;
     margin: 0 auto;
   }
+
+  .container {
+    margin-top: 7%;
+    padding-top: 1%;
+  }
 }
 
 @keyframes flip {
