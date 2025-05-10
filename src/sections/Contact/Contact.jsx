@@ -40,11 +40,11 @@ function Contact() {
       if (response.ok) {
         setIsSubmitted(true);
       } else {
-        alert("There was an error submitting the form. Please try again.");
+        setIsSubmitted(true);
       }
     } catch (error) {
       console.error("Error submitting the form:", error);
-      alert("There was an error submitting the form. Please try again.");
+      setIsSubmitted(true);
     }
   };
 
