@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faBuilding, faClock } from '@fortawesome/free-solid-svg-icons';
+import styles from './ExperienceStyles.module.css';
 
 function Experience() {
   const experiences = [
@@ -35,7 +36,7 @@ The development of all sever-side logic
   }, [experiences.length]);
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className={styles.workExperienceContainer}>
       <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
         Work Experience
       </h1>
