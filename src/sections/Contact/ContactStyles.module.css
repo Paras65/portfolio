@@ -8,6 +8,10 @@ form {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 textarea,
@@ -31,6 +35,19 @@ textarea {
   justify-self: center;
   background-color: var(--background-color);
   color: var(--form-text-color);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 10px var(--primary-color);
+  transform: scale(1.02);
+}
+
+input:hover,
+textarea:hover {
+  box-shadow: 0 0 15px var(--primary-color);
+  transform: scale(1.05);
 }
 
 ::placeholder {
@@ -61,23 +78,29 @@ input[type='submit']:active {
 }
 
 .pageclip-form__submit {
-  background-color: var(--primary-color);
-  color: var(--text-on-primary);
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  width: 140px;
+  height: 60px;
 }
 
 .pageclip-form__submit:hover {
-  background-color: var(--primary-color-hover);
-  transform: scale(1.05);
+  background-color: var(--btn-hover-color);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
 }
 
 .pageclip-form__submit:active {
-  transform: scale(0.95);
+  transform: translateY(2px) scale(0.95);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 @media (width >= 800px) {
@@ -95,5 +118,16 @@ input[type='submit']:active {
   textarea,
   input:not([type='submit']) {
     width: 800px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
