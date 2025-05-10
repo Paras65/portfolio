@@ -1,0 +1,170 @@
+/* Synced CSS with theme for Work Experience Section */
+.workExperienceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 30px;
+  background: linear-gradient(135deg, var(--background-color), var(--secondary-background-color));
+  color: var(--text-color);
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.workExperienceTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.workExperienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.workExperienceItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  margin: 20px 0;
+  background: var(--card-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.workExperienceItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.workExperienceItem:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 25px var(--hover-shadow-color);
+  background: linear-gradient(135deg, var(--hover-card-background-color), var(--secondary-hover-card-background-color));
+  animation: bounce 0.6s ease-in-out;
+}
+
+.workExperienceItem:hover::before {
+  opacity: 1;
+}
+
+.workExperienceItem h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 5px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.4s ease;
+  text-align: center;
+}
+
+.workExperienceItem:hover h3 {
+  color: var(--hover-primary-color);
+}
+
+.workExperienceItem p {
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 0 5px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.4s ease;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.workExperienceItem:hover p {
+  color: var(--hover-secondary-text-color);
+}
+
+.workExperienceItem .icon {
+  font-size: 1.2rem;
+  color: var(--icon-color);
+  transition: transform 0.4s ease;
+  margin-bottom: 15px;
+}
+
+.workExperienceItem:hover .icon {
+  transform: rotateY(180deg);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .workExperienceContainer {
+    padding: 40px 15px;
+  }
+
+  .workExperienceTitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .workExperienceItem {
+    padding: 20px;
+    margin: 12px 0;
+  }
+
+  .workExperienceItem h3 {
+    font-size: 1.2rem;
+  }
+
+  .workExperienceItem p {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

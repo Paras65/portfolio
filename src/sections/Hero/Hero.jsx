@@ -53,8 +53,8 @@ function Hero() {
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
-        <p className={`${styles.description} ${styles.centerText}`}>
-          Experienced Full-Stack Developer specializing in building scalable and secure Node.js applications. Proficient in integrating with diverse platforms, including Google, SAML, Stripe OAuth, Salesforce, and D365. Committed to delivering high-performance, user-friendly solutions that streamline business operations and drive growth
+        <p className={styles.description}>
+        Experienced Full-Stack Developer specializing in building scalable and secure Node.js applications. Proficient in integrating with diverse platforms, including Google, SAML, Stripe OAuth, Salesforce, and D365. Committed to delivering high-performance, user-friendly solutions that streamline business operations and drive growth
         </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
