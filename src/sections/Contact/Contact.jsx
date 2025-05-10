@@ -4,8 +4,7 @@ import styles from './ContactStyles.module.css';
 function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     console.log("Form submission triggered");
     setIsSubmitted(true);
   };
