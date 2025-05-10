@@ -6,6 +6,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form submission triggered");
     setIsSubmitted(true);
   };
 
