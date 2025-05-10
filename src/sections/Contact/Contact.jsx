@@ -4,7 +4,7 @@ import styles from './ContactStyles.module.css';
 function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -28,9 +28,24 @@ function Contact() {
       return;
     }
 
-    console.log("Form submission triggered");
-    setIsSubmitted(true);
-    form.submit();
+    try {
+      const response = await fetch('https://send.pageclip.co/qdL5l7SviCZnwEdHMRKlxdUPKeWD4FBK', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, phone, message }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert("There was an error submitting the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      alert("There was an error submitting the form. Please try again.");
+    }
   };
 
   return (
@@ -39,7 +54,7 @@ function Contact() {
       {isSubmitted ? (
         <p>Thank you for your message! We will get back to you soon.</p>
       ) : (
-        <form action="https://send.pageclip.co/qdL5l7SviCZnwEdHMRKlxdUPKeWD4FBK" className="pageclip-form" method="post" onSubmit={handleSubmit}>
+        <form className="pageclip-form" method="post" onSubmit={handleSubmit}>
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
           <input type="tel" name="phone" placeholder="Phone" required />
