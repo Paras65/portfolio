@@ -78,8 +78,8 @@ input[type='submit']:active {
 }
 
 .pageclip-form__submit {
-  background-color: var(--btn-color);
-  color: var(--btn-text-color);
+  background-color: var(--btn-color, #007bff); /* Fallback color if --btn-color is not defined */
+  color: var(--btn-text-color, #ffffff); /* Fallback color if --btn-text-color is not defined */
   border: none;
   padding: 15px 30px;
   font-size: 1.2rem;
@@ -93,12 +93,13 @@ input[type='submit']:active {
 }
 
 .pageclip-form__submit:hover {
-  background-color: var(--btn-hover-color);
+  background-color: var(--btn-hover-color, #0056b3); /* Fallback color if --btn-hover-color is not defined */
   transform: translateY(-3px) scale(1.1);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
 }
 
 .pageclip-form__submit:active {
+  background-color: var(--btn-active-color, #003f7f); /* Fallback color if --btn-active-color is not defined */
   transform: translateY(2px) scale(0.95);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
