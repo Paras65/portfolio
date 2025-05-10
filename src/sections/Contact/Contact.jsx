@@ -15,54 +15,16 @@ function Contact() {
       {isSubmitted ? (
         <p>Thank you for your message! We will get back to you soon.</p>
       ) : (
-        <form
-          onSubmit={handleSubmit}
-          className="pageclip-form"
-          action="https://send.pageclip.co/qdL5l7SviCZnwEdHMRKlxdUPKeWD4FBK"
-          method="post"
-        >
-          <div className="formGroup">
-            <label htmlFor="name" hidden>
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-              required
-            />
-          </div>
-          <div className="formGroup">
-            <label htmlFor="email" hidden>
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-          </div>
-          <div className="formGroup">
-            <label htmlFor="message" hidden>
-              Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Message"
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="pageclip-form__submit"
-          >
-            Submit
-          </button>
-        </form>
+        <form action="https://send.pageclip.co/qdL5l7SviCZnwEdHMRKlxdUPKeWD4FBK" class="pageclip-form" method="post">
+  
+  <input type="text" name="name" value="Roscoe Jones" />
+  <input type="email" name="email" value="roscoe@example.com" />
+
+  
+  <button type="submit" class="pageclip-form__submit">
+    <span>Send</span>
+  </button>
+</form>
       )}
     </section>
   );
