@@ -58,7 +58,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="hover btn pageclip-form__submit"
+            className="pageclip-form__submit"
           >
             Submit
           </button>
