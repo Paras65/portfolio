@@ -59,6 +59,7 @@ function Hero() {
     const fetchWeather = async () => {
       if (!city) return;
       try {
+        console.log('Weather API Key:', process.env.REACT_APP_WEATHER_API_KEY);
         const response = await fetch(
           `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${city}`
         );
@@ -96,6 +97,8 @@ function Hero() {
     if (condition.includes('snow')) return faSnowflake;
     return faCloud; // Default icon
   };
+
+  
 
   return (
     <section id="hero" className={styles.container}>
