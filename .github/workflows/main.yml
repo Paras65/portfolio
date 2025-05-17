@@ -27,8 +27,8 @@ jobs:
       # Step 4: Build the React app
       - name: Build the app
         env:
-          REACT_APP_WEATHER_API_KEY: ${{ secrets.REACT_APP_WEATHER_API_KEY}}
-          REACT_APP_PAGECLIP_ID: ${{ secrets.REACT_APP_PAGECLIP_ID}}
+          VITE_APP_WEATHER_API_KEY: ${{ secrets.VITE_APP_WEATHER_API_KEY}}
+          VITE_APP_PAGECLIP_ID: ${{ secrets.VITE_APP_PAGECLIP_ID}}
         run: npm run build
 
       # Step 5: Deploy to GitHub Pages (or another platform)
