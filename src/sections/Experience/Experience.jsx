@@ -5,7 +5,10 @@ import styles from './ExperienceStyles.module.css';
 
 function Experience() {
   const experiences = [
-    { role: 'Node Developer TL', company: 'LeadAngel',description: `Responsible for managing the interchange of
+    {
+      role: 'Node Developer TL',
+      company: 'LeadAngel',
+      description: `Responsible for managing the interchange of
  data between the server and the users. 
 The development of all sever-side logic
  definition and maintenance of the central
@@ -14,8 +17,10 @@ The development of all sever-side logic
  frontend.
  Integration of user-facing elements
  developed by front-end   developers with
- server logic`, duration: 49  },
-   
+ server logic`,
+      duration: 49,
+      yearRange: 'April 2021 - May 2025'
+    },
   ];
 
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -49,9 +54,10 @@ The development of all sever-side logic
             <h3 className="text-2xl font-semibold text-gray-800 mb-6 uppercase tracking-wider transition-colors duration-300 ease-in-out hover:text-green-600">
               <FontAwesomeIcon icon={faCode} className="text-green-500 mr-3 transition-transform duration-300 ease-in-out hover:rotate-180" /> {exp.role}
             </h3>
-            <p className="text-gray-600 mb-4 transition-colors duration-300 ease-in-out hover:text-blue-600">
+            <p className="text-gray-600 mb-1 transition-colors duration-300 ease-in-out hover:text-blue-600">
               <FontAwesomeIcon icon={faBuilding} className="text-blue-500 mr-3 transition-transform duration-300 ease-in-out hover:rotate-180" /> {exp.company}
             </p>
+            <p className="text-sm text-gray-400 mb-4">{exp.yearRange}</p>
             <p className="text-gray-500 mb-6 text-center transition-opacity duration-300 ease-in-out hover:opacity-80">{exp.description}</p>
             <p className="text-sm text-gray-400 transition-colors duration-300 ease-in-out hover:text-orange-600">
               <FontAwesomeIcon icon={faClock} className="text-orange-500 mr-3 transition-transform duration-300 ease-in-out hover:rotate-180" /> <strong>Years of Experience:</strong> {exp.duration} months
