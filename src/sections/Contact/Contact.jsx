@@ -29,7 +29,7 @@ function Contact() {
     }
 
     try {
-      const response = await fetch(`https://send.pageclip.co/${process.env.REACT_APP_PAGECLIP_ID}`, {
+      const response = await fetch(`https://send.pageclip.co/${import.meta.env.VITE_APP_PAGECLIP_ID}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

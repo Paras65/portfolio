@@ -59,9 +59,9 @@ function Hero() {
     const fetchWeather = async () => {
       if (!city) return;
       try {
-        console.log('Weather API Key:', process.env);
+        console.log('Weather API Key:',import.meta.env);
         const response = await fetch(
-          `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${city}`
+          `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_APP_WEATHER_API_KEY}&q=${city}`
         );
         if (!response.ok) {
           throw new Error('Failed to fetch weather data');
