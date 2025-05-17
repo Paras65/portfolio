@@ -27,14 +27,14 @@ jobs:
       # Step 4: Build the React app
       - name: Build the app
         env:
-          REACT_APP_WEATHER_API_KEY: ${{ secrets.REACT_APP_WEATHER_API_KEY }}
-          REACT_APP_PAGECLIP_ID: ${{ secrets.REACT_APP_PAGECLIP_ID }}
+          REACT_APP_WEATHER_API_KEY: ${{ secrets.REACT_APP_WEATHER_API_KEY}}
+          REACT_APP_PAGECLIP_ID: ${{ secrets.REACT_APP_PAGECLIP_ID}}
         run: npm run build
 
       # Step 5: Deploy to GitHub Pages (or another platform)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-            personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+            personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN}}
             publish_dir: ./dist
             publish_branch: gh-pages
