@@ -6,12 +6,14 @@ import Juerney from './sections/Juerney/Juerney';
 import Experience from './sections/Experience/Experience';
 import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
+import Whatsnew from './sections/Whatsnew/Whatsnew';
 
 function App() {
   return (
     <>
       <Hero />
       <Skills />
+      <Whatsnew />
       <Projects />
       <Juerney />
       <Experience />
