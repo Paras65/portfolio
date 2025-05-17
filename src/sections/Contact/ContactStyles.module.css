@@ -104,6 +104,18 @@ input[type='submit']:active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+.inputGroup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.inputIcon {
+  margin-right: 0.7em;
+  color: var(--primary-color, #0078d4);
+  font-size: 1.1em;
+}
+
 @media (width >= 800px) {
   textarea,
   input:not([type='submit']) {
