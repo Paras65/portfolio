@@ -59,7 +59,7 @@ function Hero() {
     const fetchWeather = async () => {
       if (!city) return;
       try {
-        console.log('Weather API Key:', process.env.REACT_APP_WEATHER_API_KEY);
+        console.log('Weather API Key:', process.env);
         const response = await fetch(
           `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${city}`
         );
