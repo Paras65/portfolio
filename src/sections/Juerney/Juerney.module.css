@@ -184,6 +184,13 @@
   box-shadow: 0 4px 16px rgba(0,120,212,0.18);
 }
 
+.icon {
+  font-size: 1.5em;
+  color: var(--primary);
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
 @media (max-width: 600px) {
   .timeline {
     padding-left: 18px;
