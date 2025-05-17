@@ -59,7 +59,7 @@ function Hero() {
     const fetchWeather = async () => {
       if (!city) return;
       try {
-        console.log('Weather API Key:',import.meta.env);
+        console.log('Weather API Key:',import.meta.env.VITE_APP_DEBUGE);
         const response = await fetch(
           `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_APP_WEATHER_API_KEY}&q=${city}`
         );
