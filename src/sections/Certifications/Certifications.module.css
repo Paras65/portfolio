@@ -1,0 +1,53 @@
+.certificationsSection {
+  padding: 2em 0;
+}
+
+.title {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.certList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certItem {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+  background: #f8fafc;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,120,212,0.06);
+}
+
+.certIcon {
+  font-size: 1.5em;
+}
+
+.certLink {
+  font-weight: 600;
+  color: #0077b5;
+  text-decoration: none;
+}
+
+.certLink:hover {
+  text-decoration: underline;
+}
+
+.certPlatform {
+  color: #888;
+  font-size: 0.95em;
+}
+
+.certDate {
+  margin-left: auto;
+  color: #555;
+  font-size: 0.95em;
+}

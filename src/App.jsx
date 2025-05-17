@@ -5,6 +5,7 @@ import Whatsnew from './sections/Whatsnew/Whatsnew';
 import Projects from './sections/Projects/Projects';
 import Juerney from './sections/Juerney/Juerney';
 import Experience from './sections/Experience/Experience';
+import Certifications from './sections/Certifications/Certifications';
 import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
 
@@ -16,6 +17,7 @@ function App() {
       <Projects />
       <Juerney />
       <Experience />
+      <Certifications />
       <Whatsnew />
       <Contact />
       <Footer />
