@@ -8,6 +8,7 @@ import Experience from './sections/Experience/Experience';
 import Certifications from './sections/Certifications/Certifications';
 import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
+import Fun from './sections/Fun/Fun';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
       <Projects />
       <Juerney />
       <Experience />
-      <Certifications />
+      {/* <Certifications /> */}
       <Whatsnew />
+      {/* <Fun/> */}
       <Contact />
       <Footer />
     </>
