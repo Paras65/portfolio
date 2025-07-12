@@ -58,7 +58,7 @@ function Experience() {
       <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
         Work Experience
       </h1>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
         {experienceData.map((job) => {
           const { duration, yearRange } = getExperienceDetails(
             job.startDate,
@@ -67,7 +67,7 @@ function Experience() {
           return (
             <div
               key={job.role}
-              className="flex flex-col items-center p-10 m-6 bg-gradient-to-br from-white to-gray-100 border border-gray-200 rounded-xl shadow-xl transition-all duration-500 ease-in-out transform hover:scale-110 hover:shadow-2xl hover:bg-gradient-to-tl hover:from-gray-100 hover:to-white"
+              className="flex flex-col items-center p-10 bg-gradient-to-br from-white to-gray-100 border border-gray-200 rounded-xl shadow-xl transition-all duration-500 ease-in-out transform hover:scale-110 hover:shadow-2xl hover:bg-gradient-to-tl hover:from-gray-100 hover:to-white"
             >
               <h3 className="text-2xl font-semibold text-gray-800 mb-6 uppercase tracking-wider transition-colors duration-300 ease-in-out hover:text-green-600">
                 <FontAwesomeIcon icon={faCode} className="text-green-500 mr-3 transition-transform duration-300 ease-in-out hover:rotate-180" /> {job.role}
@@ -80,7 +80,9 @@ function Experience() {
               <p className="mt-auto text-sm text-gray-400 transition-colors duration-300 ease-in-out hover:text-orange-600">
                 <FontAwesomeIcon icon={faClock} className="text-orange-500 mr-3 transition-transform duration-300 ease-in-out hover:rotate-180" /> <strong>Experience:</strong> {duration} months
               </p>
+               <br />
             </div>
+           
           );
         })}
       </div>
