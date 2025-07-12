@@ -5,6 +5,14 @@ import styles from './ExperienceStyles.module.css';
 
 function Experience() {
   const experiences = [
+     {
+      role: 'Software Engineer',
+      company: 'Capgemini',
+      description: `Worked on developing and maintaining web applications using modern Node.js frameworks.`,
+      //set dynamic data for duration
+      duration: 2,
+      yearRange: 'June 2025 - Present'
+    },
     {
       role: 'Node Developer TL',
       company: 'LeadAngel',
@@ -20,7 +28,8 @@ The development of all sever-side logic
  server logic`,
       duration: 49,
       yearRange: 'April 2021 - May 2025'
-    },
+    }
+    
   ];
 
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -45,7 +54,8 @@ The development of all sever-side logic
       <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
         Work Experience
       </h1>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+       
         {experiences.map((exp, index) => (
           <div
             key={index}
@@ -62,6 +72,8 @@ The development of all sever-side logic
             <p className="text-sm text-gray-400 transition-colors duration-300 ease-in-out hover:text-orange-600">
               <FontAwesomeIcon icon={faClock} className="text-orange-500 mr-3 transition-transform duration-300 ease-in-out hover:rotate-180" /> <strong>Years of Experience:</strong> {exp.duration} months
             </p>
+            <br />
+            <br />
           </div>
         ))}
       </div>
