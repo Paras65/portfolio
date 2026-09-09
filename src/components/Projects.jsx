@@ -86,12 +86,36 @@ const Projects = ({ projects = [] }) => {
               </div>
 
               {/* Action Links */}
-              <div className="flex items-center gap-3 pt-2">
+              <div className="flex items-center gap-2 pt-2 flex-wrap">
+                {project.liveUrl && project.liveUrl !== '#' && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 min-w-[110px] flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-semibold font-mono transition-all"
+                  >
+                    <span>Live Demo</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+
+                {project.githubUrl && project.githubUrl !== '#' && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 min-w-[110px] flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 text-xs font-semibold font-mono transition-all"
+                  >
+                    <Github className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>View Code</span>
+                  </a>
+                )}
+
                 <a
                   href="#contact"
-                  className="w-full flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-cyan-500 text-slate-300 hover:text-slate-950 border border-slate-800 hover:border-cyan-500 text-xs font-semibold font-mono transition-all"
+                  className="flex-1 min-w-[120px] flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl bg-slate-900/80 hover:bg-cyan-500 text-slate-300 hover:text-slate-950 border border-slate-800 hover:border-cyan-500 text-xs font-semibold font-mono transition-all"
                 >
-                  <span>Inquire Details</span>
+                  <span>Inquire Specs</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </div>
